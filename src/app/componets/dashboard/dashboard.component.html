@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 auto;
+    }
+    .main-content {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .card-row {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding: 0 20px;
+    }
+    .three-d-card {
+      width: 300px;
+      /* Autres styles de votre carte */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="main-content">
+      <p>Dashboard works!</p>
+      <div class="welcome-message">
+        <h1>Welcome {{ firstName }}</h1>
+      </div>
+    </div>
+
+    <div class="card-row">
+      <div class="three-d-card">
+        <div class="card-wrapper">
+          <div class="card-face front">
+            <div class="card-content">
+              <div class="card-title">My company</div>
+              <div class="card-icons">
+                <mat-icon>place</mat-icon>
+                <mat-icon>phone</mat-icon>
+                <mat-icon>email</mat-icon>
+              </div>
+            </div>
+          </div>
+          <div class="card-face back">
+            <div class="card-content">
+              <div class="card-title"></div>
+              <div class="card-details">
+                <p><mat-icon>place</mat-icon> {{ entity[0].adress }}</p>
+                <p><mat-icon>phone</mat-icon> {{ entity[0].phone }}</p>
+                <p><mat-icon>email</mat-icon> {{ entity[0].email }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="three-d-card">
+        <div class="card-wrapper">
+          <div class="card-face front">
+            <div class="card-content">
+              <div class="card-title">my profile</div>
+              <div class="card-icons">
+                <mat-icon>badge</mat-icon> <!-- Icône pour le matricule -->
+                <mat-icon>school</mat-icon> <!-- Icône pour la qualification -->
+                <mat-icon>assignment_ind</mat-icon> <!-- Icône pour le CNSS -->
+              </div>
+            </div>
+          </div>
+          <div class="card-face back">
+            <div class="card-content">
+              <div class="card-title"></div>
+              <div class="card-details">
+                <p><mat-icon>badge</mat-icon> {{ profile.registrationNumber }}</p>
+                <p><mat-icon>school</mat-icon>{{ profile.qualification.nom }}</p>
+                <p><mat-icon>assignment_ind</mat-icon> {{ profile.cnss }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

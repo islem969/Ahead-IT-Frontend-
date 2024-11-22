@@ -1,0 +1,78 @@
+.outer {
+    height: 100vh;
+    background: linear-gradient(to top, #c9c9ff 50%, #6e6ef6 90%) no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alignement en haut */
+    padding-top: 50px; /* Ajustez cette valeur pour le déplacement vers le haut */
+}
+
+.panel-heading {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#forget {
+    min-width: 100px;
+    margin-left: auto;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.form-inline label {
+    padding-left: 10px;
+    margin: 0;
+    cursor: pointer;
+}
+
+.btn {
+    margin-top: 20px;
+    border-radius: 15px;
+}
+
+.panel {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    margin-top: 20px; /* Réduisez cette valeur pour un déplacement vers le haut */
+    background-color: #fff;
+    padding: 20px;
+}
+
+.input-field {
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    color: #4343ff;
+    margin-bottom: 15px;
+}
+
+.input-field.error {
+    border: 1px solid red;
+    color: red;
+}
+
+input[type='text'],
+input[type='password'] {
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.fa-eye-slash.btn {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+}

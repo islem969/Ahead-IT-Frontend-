@@ -1,0 +1,55 @@
+<!-- add-carrier-dialog.component.html -->
+<h2 mat-dialog-title>Ajouter une Carrière</h2>
+<div mat-dialog-content>
+  <form [formGroup]="carrierForm">
+    <mat-form-field appearance="fill">
+      <mat-label>Salary</mat-label>
+      <input matInput formControlName="salary" type="number">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>BBAN</mat-label>
+      <input matInput formControlName="bban" type="text">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>From</mat-label>
+      <input matInput formControlName="from" [matDatepicker]="fromPicker">
+      <mat-datepicker-toggle matSuffix [for]="fromPicker"></mat-datepicker-toggle>
+      <mat-datepicker #fromPicker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>To</mat-label>
+      <input matInput formControlName="to" [matDatepicker]="toPicker">
+      <mat-datepicker-toggle matSuffix [for]="toPicker"></mat-datepicker-toggle>
+      <mat-datepicker #toPicker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>RIB</mat-label>
+      <input matInput formControlName="rib" type="text">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Qualification</mat-label>
+      <mat-select formControlName="qualificationId">
+        <mat-option *ngFor="let qualification of qualifications" [value]="qualification.id">
+          {{ qualification.nom }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>civil_Status</mat-label>
+      <mat-select formControlName="civil_StatusId">
+        <mat-option *ngFor="let civil_Status of civil_Statuss" [value]="civil_Status.id">
+          {{ civil_Status.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button [mat-dialog-close]="true">Cancel</button>
+  <button mat-button (click)="onSubmit()" [disabled]="carrierForm.invalid">Add</button>
+</div>

@@ -1,0 +1,54 @@
+<div *ngIf="entities.length > 0" class="entities-container">
+    <mat-card *ngFor="let entity of entities" class="entity-card">
+      <mat-card-header>
+        <mat-card-title class="custom-title">Entity Details</mat-card-title>
+    </mat-card-header>
+      <mat-card-content>
+        <form>
+          <div class="form-row">
+            <mat-form-field appearance="fill" class="form-field">
+              <mat-label>Tax Registration Number</mat-label>
+              <input matInput [value]="entity.tax_registration_number" readonly>
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="form-field">
+              <mat-label>Trad Registration</mat-label>
+              <input matInput [value]="entity.trad_registration" readonly>
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="form-field">
+              <mat-label>Exploitation Code</mat-label>
+              <input matInput [value]="entity.exploitation_code" readonly>
+            </mat-form-field>
+          </div>
+          <div class="form-row">
+            <mat-form-field appearance="fill" class="form-field">
+              <mat-label>Address</mat-label>
+              <input matInput [value]="entity.adress" readonly>
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="form-field">
+              <mat-label>Email</mat-label>
+              <input matInput [value]="entity.email" readonly>
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="form-field">
+              <mat-label>Phone</mat-label>
+              <input matInput [value]="entity.phone" readonly>
+            </mat-form-field>
+          </div>
+          <div class="form-row">
+            <mat-form-field appearance="fill" class="form-field">
+              <mat-label>Creation Date</mat-label>
+              <input matInput [value]="entity.creation_Date | date:'short'" readonly>
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="form-field">
+              <mat-label>RNE</mat-label>
+              <input matInput [value]="entity.rne" readonly>
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="form-field">
+              <mat-label>Social Security Scheme</mat-label>
+              <input matInput [value]="entity.social_security_sheme" readonly>
+            </mat-form-field>
+          </div>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  

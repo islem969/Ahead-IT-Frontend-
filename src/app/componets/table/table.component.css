@@ -1,0 +1,54 @@
+table {
+    width: 100%;
+  }
+  
+  .mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  td, th {
+    width: 25%;
+  }
+  .table-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 100px;
+  }
+ p {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .right-align {
+    text-align: right;
+    margin-bottom: 10px; /* Optional: Adds some space below the button */
+  }
+  
+  .right-button {
+    margin-left: auto; /* Ensures the button is aligned to the right */
+  }
+  .center-title {
+    text-align: center;
+    font-size: 2em; /* Ajustez la taille selon vos besoins */
+    font-weight: bold; /* Optionnel : ajoute du gras au texte */
+    margin-top: 20px; /* Optionnel : espace au-dessus du titre */
+    margin-bottom: 20px; /* Optionnel : espace en dessous du titre */
+  }
+  .action-buttons {
+    display: flex;
+    gap: 8px; /* Espace entre les boutons */
+  }
+  
+  .mat-primary .mat-icon {
+    color: blue;
+  }
+  
+  .mat-warn .mat-icon {
+    color: red;
+  }
+  .mat-dialog-container {
+    max-width: 50%; /* La moitié de la largeur disponible */
+    width: 50%; /* La moitié de la largeur disponible */
+    padding: 50px; /* Ajoute un padding intérieur pour espacer le contenu */
+  }
+  

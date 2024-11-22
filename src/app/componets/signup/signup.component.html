@@ -1,0 +1,169 @@
+<div class="outer">
+    <div class="container">
+        <div class="row">
+            <div class="offset-md-2 col-lg-5 col-md-7 offset-lg-4 offset-md-3">
+                <div class="panel border bg-white">
+                    <div class="panel-heading">
+                        <h3 class="pt-3 font-weight-bold">Sign Up</h3>
+                    </div>
+                    <div class="panel-body p-3">
+                        <form [formGroup]="singUpForm">
+                            <div class="form-group pt-3">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="input-field">
+                                            <span class="fa fa-user p-2"></span>
+                                            <input type="text" placeholder="FirstName" formControlName="firstName">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="input-field">
+                                            <span class="fa fa-user p-2"></span>
+                                            <input type="text" placeholder="LastName" formControlName="lastName">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="input-field">
+                                            <span class="fa fa-envelope p-2"></span>
+                                            <input type="text" placeholder="Email" formControlName="email">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group pt-3">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="input-field">
+                                            <span class="fa fa-phone p-2"></span>
+                                            <input type="text" placeholder="PhoneNumber" formControlName="phoneNumber">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="input-field">
+                                            <span class="fa fa-user p-2"></span>
+                                            <input type="text" placeholder="Username" formControlName="username">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="input-field">
+                                            <span class="fa fa-user p-2"></span>
+                                            <input type="text" placeholder="RegistrationNumber" formControlName="registrationNumber">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Continue with similar structure for remaining fields -->
+                            <div class="form-group pt-3">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="input-field">
+                                            <span class="fa fa-envelope p-2"></span>
+                                            <input type="text" placeholder="Cnss" formControlName="cnss">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="input-field">
+                                            <span class="fa fa-phone p-2"></span>
+                                            <input type="text" placeholder="Bban" formControlName="bban">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="input-field">
+                                            <span class="fa fa-phone p-2"></span>
+                                            <input type="text" placeholder="Leavebalance" formControlName="leavebalance">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Continue with similar structure for remaining fields -->
+                            <div class="form-group pt-3">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="input-field">
+                                            <span class="fa fa-envelope p-2"></span>
+                                            <input type="text" placeholder="Numberofchildren" formControlName="numberofchildren">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-4">
+                                        <div class="input-field">
+                                            <span class="fa fa-phone p-2"></span>
+                                            <input type="text" placeholder="Salary" formControlName="salary">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Continue with similar structure for remaining fields -->
+                            <div class="form-group pt-3">
+                                <div class="row">
+                                
+                                    
+                                    <div class="col-md-4">
+                                        <div class="input-field">
+                                            <span class="fa fa-phone p-2"></span>
+                                            <input type="text" placeholder="Birthdate" formControlName="birthdate">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Continue with similar structure for remaining fields -->
+                            <div class="form-group pt-3">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="input-field">
+                                            <span class="fa fa-envelope p-2"></span>
+                                            <input type="text" placeholder="Hiringdate" formControlName="hiringdate">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="input-field">
+                                            <span class="fa fa-id-card p-2"></span>
+                                            <input type="text" placeholder="Cin" formControlName="cin">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="input-field">
+                                            <span class="fa fa-venus-mars p-2"></span>
+                                            <input type="text" placeholder="Sex" formControlName="sex">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Continue with similar structure for remaining fields -->
+                            <div class="form-group pt-3">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="input-field">
+                                            <span class="fa fa-id-card p-2"></span>
+                                            <input type="text" placeholder="Leavebalancedate" formControlName="leavebalancedate">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group pt-3">
+                                <div class="input-field">
+                                    <span class="fa fa-lock p-2"></span>
+                                    <input [type]="type" placeholder="Password" formControlName="password">
+                                    <span (click)="hideShowPass()" class="fa" [class]="eyeIcon"></span>
+                                </div>
+                            </div>
+                            
+                            <div class="pt-3">
+                                <button  (click)="onSingup()"  type="submit" class="btn btn-primary btn-block mt-4 w-100">Sign Up</button>
+                            </div>
+                            <div class="text-center pt-4 text-muted">
+                                Already have an account? <a id="forget" [routerLink]="['/login']">Login</a>
+                            </div>
+                        </form>
+                        
+                    </div>
+                    <div class="mx-3 my-2 py-2 bordet">
+                        <div class="text-center py-3">
+                            <!-- Additional content can go here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

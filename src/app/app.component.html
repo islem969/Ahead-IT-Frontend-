@@ -1,0 +1,31 @@
+<mat-toolbar color="primary" *ngIf="showSidebar">
+  <button mat-icon-button aria-label="Menu icon" (click)="toggleMenu()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <h1>Dashboard</h1>
+  <span class="spacer"></span> <!-- Espaceur pour aligner le bouton à droite -->
+  <button mat-icon-button aria-label="Logout" (click)="logout()">
+    <mat-icon>exit_to_app</mat-icon>
+  </button>
+</mat-toolbar>
+
+<mat-sidenav-container autosize *ngIf="showSidebar">
+  <mat-sidenav [ngClass]="{'expanded': !isCollapsed}" [mode]="isMobile ? 'over' : 'side'" [opened]="!isMobile">
+    <mat-nav-list>
+      <a *ngFor="let menu of menus" mat-list-item [routerLink]="menu.path">
+        <mat-icon>{{ menu.class }}</mat-icon>
+        <span *ngIf="!isCollapsed">{{ menu.title }}</span>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <div class="content mat-elevation-z8">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<div *ngIf="!showSidebar">
+  <router-outlet></router-outlet>
+</div>

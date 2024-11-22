@@ -1,0 +1,102 @@
+/* Container styles (adjust as needed) */
+.container {
+  display: flex;
+  flex-direction: column; /* Disposer en colonne */
+  align-items: center; /* Centrer horizontalement */
+  height: 100vh; /* Hauteur de la fenêtre visible */
+  padding: 70px; /* Marge intérieure */
+}
+
+.welcome-message {
+  text-align: center; /* Centrer le texte */
+  font-weight: bold; /* Mettre en gras */
+  font-family: 'Arial', sans-serif; /* Police de caractère élégante (modifier selon vos préférences) */
+  margin-bottom: 20px; /* Espacement vers le bas */
+}
+
+.main-content {
+  text-align: center; /* Centrer le contenu principal */
+  flex: 1; /* Le contenu principal prendra toute la largeur disponible */
+}
+
+/* Card styles */
+.three-d-card {
+  width: 350px; /* Largeur de la carte */
+  height: 250px; /* Hauteur de la carte */
+  perspective: 1000px;
+  margin-top: 20px; /* Espacement vers le haut */
+  margin-left: auto; /* Aligner à droite */
+}
+
+.card-wrapper {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.three-d-card:hover .card-wrapper {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column; /* Afficher les éléments en colonne */
+  justify-content: center; /* Centrer verticalement */
+  align-items: center; /* Centrer horizontalement */
+  border: 2px solid #0f456a;
+  border-radius: 15px;
+  background-color: #fff;
+}
+
+.card-face.front {
+  transform: rotateY(0deg);
+}
+
+.card-face.back {
+  transform: rotateY(180deg);
+}
+
+.card-content {
+  text-align: center;
+  color: #333;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-icons {
+  display: flex;
+  justify-content: space-around;
+  width: 100%; /* Utiliser toute la largeur disponible */
+  margin-top: 20px;
+}
+
+.card-icons mat-icon {
+  font-size: 20px;
+  color: #0f456a;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.card-icons mat-icon:hover {
+  color: #2196f3; /* Changer la couleur au survol */
+}
+
+.card-details {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.card-details p {
+  margin-bottom: 10px;
+}

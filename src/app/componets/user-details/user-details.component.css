@@ -1,0 +1,70 @@
+/* Style pour le conteneur du formulaire */
+.form-container {
+    max-width: 600px; /* Largeur maximale du formulaire */
+    margin: auto; /* Centre le formulaire horizontalement */
+    padding: 20px; /* Espacement intérieur du conteneur */
+    border: 1px solid #fcfcfc; /* Bordure autour du formulaire */
+    border-radius: 8px; /* Coins arrondis de la bordure */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère pour le cadre */
+  }
+
+  /* Style pour le contenu du formulaire */
+  .form-content {
+    display: flex; /* Utilisation de flexbox pour organiser les éléments */
+    flex-direction: column; /* Organise les éléments en colonnes */
+  }
+  .custom-dialog-content {
+    border: 1px solid #ccc; /* Bordure grise */
+    padding: 20px; /* Espacement intérieur */
+  }
+  /* Style pour les lignes de formulaire */
+  .row {
+    display: flex; /* Utilisation de flexbox pour les lignes */
+    justify-content: space-between; /* Espacement égal entre les colonnes */
+    margin-bottom: 15px; /* Espacement entre les lignes */
+  }
+  
+  /* Style pour les colonnes du formulaire */
+  .col {
+    flex: 1; /* Prend toute la largeur disponible */
+    margin-right: 10px; /* Espacement entre les colonnes */
+  }
+  
+  /* Style pour les boutons */
+  button {
+    margin-top: 20px; /* Espacement entre le dernier champ et le bouton */
+  }
+  .custom-width {
+    width: 220px; /* Ajustez la largeur selon vos besoins */
+  }
+  .custom-title {
+    font-size: 24px; /* Taille de police personnalisée */
+    font-weight: bold; /* Gras */
+    color: #25258d; /* Couleur personnalisée */
+    text-align: center; /* Centrer le texte */
+    margin-bottom: 20px; /* Espacement en bas */
+  }
+  
+  .d-flex {
+    display: flex;
+  }
+  
+  .justify-content-between {
+    justify-content: space-between;
+  }
+  
+  .align-items-center {
+    align-items: center;
+  }
+  
+  .mb-2 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .mt-3 {
+    margin-top: 1rem;
+  }
+  
+  .mt-2 {
+    margin-top: 0.5rem;
+  }

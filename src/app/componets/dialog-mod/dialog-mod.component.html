@@ -1,0 +1,78 @@
+<div class="form-container">
+    <h2 style="text-align:center;" mat-dialog-title class="custom-title">Update utilisateur</h2>
+    <div class="form-content">
+      <form [formGroup]="userForm">
+        <div class="row mb-3">
+          <div class="col">
+            <mat-form-field appearance="fill">
+              <mat-label>First Name</mat-label>
+              <input matInput formControlName="firstName" required>
+            </mat-form-field>
+          </div>
+          <div class="col">
+            <mat-form-field appearance="fill">
+              <mat-label>Last Name</mat-label>
+              <input matInput formControlName="lastName" required>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col">
+            <mat-form-field appearance="fill">
+              <mat-label>CIN</mat-label>
+              <input matInput formControlName="cin" required>
+            </mat-form-field>
+          </div>
+          <div class="col">
+            <mat-form-field appearance="fill">
+              <mat-label>CNSS</mat-label>
+              <input matInput formControlName="cnss" required>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col">
+            <mat-form-field appearance="fill">
+              <mat-label>Email</mat-label>
+              <input matInput formControlName="email" required>
+            </mat-form-field>
+          </div>
+          <div class="col">
+            <mat-form-field appearance="fill">
+              <mat-label>Phone Number</mat-label>
+              <input matInput formControlName="phoneNumber">
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col">
+            <mat-form-field class="custom-width">
+              <mat-label>Date de naissance</mat-label>
+              <input matInput [matDatepicker]="pickerBirthdate" formControlName="birthdate">
+              <mat-datepicker-toggle matSuffix [for]="pickerBirthdate"></mat-datepicker-toggle>
+              <mat-datepicker #pickerBirthdate></mat-datepicker>
+            </mat-form-field>
+          </div>
+          <div class="col">
+            <mat-form-field class="custom-width">
+              <mat-label>Date d'embauche</mat-label>
+              <input matInput [matDatepicker]="pickerHiringdate" formControlName="hiringdate">
+              <mat-datepicker-toggle matSuffix [for]="pickerHiringdate"></mat-datepicker-toggle>
+              <mat-datepicker #pickerHiringdate></mat-datepicker>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row mb-3">
+        <div class="col">
+            <mat-form-field appearance="fill">
+              <mat-label>Sex</mat-label>
+              <input matInput formControlName="Sex" required>
+            </mat-form-field>
+          </div>
+</div>
+
+        <button mat-raised-button color="primary" type="submit" (click)="submit()" >Enregistrer</button>
+      </form>
+    </div>
+  </div>
+  

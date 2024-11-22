@@ -1,0 +1,50 @@
+h1 {
+    padding: 0 1rem;
+  }
+  
+  h2 {
+    padding: 1rem;
+  }
+  
+  mat-toolbar {
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    background-color: #3636aa; /* Couleur de fond de la barre d'outils */
+    color: white; /* Couleur du texte sur la barre d'outils */
+  }
+  
+  mat-sidenav-container {
+    height: 100%;
+  }
+  
+  mat-sidenav {
+    padding-top: 3.5rem;
+    background-color: #eeeff5; /* Couleur de fond de la sidebar */
+  
+    @media screen and (min-width: 600px) {
+      padding-top: 4rem;
+    }
+  
+    &.expanded {
+      width: 250px;
+    }
+  
+    .entry {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.75rem;
+    }
+  }
+  
+  mat-sidenav-content {
+    padding-top: 3.5rem;
+  
+    @media screen and (min-width: 600px) {
+      padding-top: 4rem;
+    }
+  }
+    .spacer {
+        flex: 1; }
+  
